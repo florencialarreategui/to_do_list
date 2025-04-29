@@ -35,13 +35,17 @@ body {
     font-family: "Lato", sans-serif;
     font-weight: 700;
     font-style: normal;
+    border-radius: 3px;
 }
 
 
-
+ul {
+    list-style-type: none
+}
 
 button {
     width: 70px;
+    border-radius: 3px;
 }
 
 h1 {
