@@ -1,19 +1,22 @@
 var inputTarea = document.getElementById("tarea");
-//var prioridad =
 var btn = document.getElementById("agregar");
 var lista= document.getElementById("lista");
+var selectPrioridad = document.getElementById("prioridad");
 
 btn.onclick = function(){
-    elemento= inputTarea.value; //tomo valor
-    li = document.createElement("li");
+    let elemento= inputTarea.value; //tomo valor
+    let li = document.createElement("li");
     li.textContent = elemento; //lo lleno
     lista.appendChild (li); //ultimo en la lista
-//modificar
+
+    //modificar
+   let valorSeleccionado = selectPrioridad.value;
+
+//para eliminar
     var btnEliminar = document.createElement("span");//span misma linea
-    btnEliminar.innerHTML = `<button type="reset" id="reset">Eliminar<button/>`;
+    btnEliminar.textContent= "Eliminar";
     li.appendChild(btnEliminar);
 
-    //funcion a eliminar
     btnEliminar.onclick= function(){
         li.remove();
     }
