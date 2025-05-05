@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
 * {
     margin: 0;
     box-sizing: border-box;
@@ -15,7 +16,7 @@ body {
     font-weight: 100;
     font-size: 150%;
     font-style: normal;
-    color:#0c1a16;
+    color: #0c1a16;
 }
 
 
@@ -43,6 +44,7 @@ body {
     font-style: normal;
     border-radius: 6px;
     transition: all 0.3s ease;
+    border-style: none
 }
 
 .tamaño:focus {
@@ -65,7 +67,7 @@ body {
     transition: all 0.3s ease;
     margin-top: 1rem;
     width: 50%;
-   
+
 }
 
 #agregar:hover {
@@ -89,18 +91,21 @@ li {
     align-items: center;
     font-weight: 900;
     padding: 15px 15px;
-    margin:15px 10px;
+    margin: 15px 10px;
     border: 1px solid rgba(46, 139, 87, 0.2);
-   border-radius: 6px;
-   
+    border-radius: 6px;
+
 }
-#botones{
-   display: flex;
-   flex-direction: row;
-   align-items: center;
-   justify-content: end;
-  
+
+#botones {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: end;
+
+
 }
+
 .eliminar {
     background-color: #e74c3c;
     color: white;
@@ -116,6 +121,7 @@ li {
 .eliminar:hover {
     background-color: #c0392b;
 }
+
 .editar {
     background-color: #ec791b;
     color: white;
@@ -134,7 +140,4 @@ li {
 
 h1 {
     margin: 15px;
-}
-#ordenar{
-border-radius: 3px;
 }
