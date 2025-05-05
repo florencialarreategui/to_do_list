@@ -43,6 +43,10 @@ ul {
     list-style-type: none
 }
 
+li {
+    font-weight: 900;
+}
+
 button {
     width: 70px;
     border-radius: 3px;
