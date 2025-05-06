@@ -3,19 +3,17 @@ var btn = document.getElementById("agregar");
 var lista = document.getElementById("lista");
 var selectPrioridad = document.getElementById("prioridad");
 
-
-let tareas = []; // para almacenar objetos de tarea
+let tareas = []; 
 
 btn.onclick = function() {
     let textoTarea = inputTarea.value.trim();
     if (textoTarea === '') return;
 
-    // Crear objeto de tarea
     const nuevaTarea = {
-        id: Date.now(), // ID único
+        id: Date.now(),
         texto: textoTarea,
         prioridad: parseInt(selectPrioridad.value),
-        fechaCreacion: new Date(), // Fecha actual al crear
+        fechaCreacion: new Date(), 
         fechaModificacion: new Date() // Inicialmente igual a creación
     };
     
@@ -25,7 +23,6 @@ btn.onclick = function() {
     selectPrioridad.value = '1';
 };
 
-// Función para mostrar tareas (ordenadas)
 function mostrarTareas() {
     lista.innerHTML = ''; // Limpiar lista antes de renderizar
 
@@ -58,18 +55,12 @@ function mostrarTareas() {
     });
 }
 
-// Formatear fechas a texto legible
+
 function formatearFecha(fecha) {
-    return fecha.toLocaleString('es-ES', {
-        day: '2-digit',
-        month: '2-digit',
-        year: 'numeric',
-        hour: '2-digit',
-        minute: '2-digit'
-    });
+    return fecha.toISOString();
 }
 
-// Ordenar tareas
+
 document.getElementById('ordenar').addEventListener('change', (e) => {
     const criterio = e.target.value;
     
@@ -85,27 +76,3 @@ document.getElementById('ordenar').addEventListener('change', (e) => {
     
     mostrarTareas();
 });
-/*
-btn.onclick = function() {
-    let textoTarea = inputTarea.value.trim();
-    if (textoTarea === '') return; // No permitir agregar tarea vacía
-
-    let prioridad = selectPrioridad.value;
-    let fecha = selectFecha.value;
-
-    let li = document.createElement("li");
-    li.textContent = `Tarea: ${textoTarea} - Prioridad: ${prioridad} - Fecha: ${fecha}`; 
-
-    const deleteBtn = document.createElement('button');
-    deleteBtn.textContent = 'Eliminar';
-    deleteBtn.onclick = function() {
-        li.remove();
-    };
-
-    li.appendChild(deleteBtn);
-    lista.appendChild(li);
-
-    inputTarea.value = ''; // Limpiar el input
-    selectPrioridad.value = '1'; 
-}
-*/
