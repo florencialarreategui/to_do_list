@@ -36,10 +36,13 @@ function mostrarTareas() {
         `;
 
        
-        li.querySelector('.eliminar').addEventListener('click', () => {
-            tareas = tareas.filter(t => t.id !== tarea.id);
-            mostrarTareas();
+        li.querySelector('.eliminar').onclick = function() {
+        tareas = tareas.filter(function(t) {
+        return t.id !== tarea.id;
         });
+        mostrarTareas();
+        };
+
 
         
         li.querySelector('.editar').addEventListener('click', () => {
@@ -57,7 +60,7 @@ function mostrarTareas() {
 
 
 function formatearFecha(fecha) {
-    return fecha.toISOString();
+    return fecha.toLocaleString()
 }
 
 
